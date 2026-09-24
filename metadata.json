@@ -1,0 +1,6 @@
+{
+  "name": "JPCT – Loja Online Lubango",
+  "description": "Loja online oficial da JPCT – Prestação de Serviços, Lda. no Lubango, Huíla. Livros, papelaria, material de escritório, bens alimentares, sementes, artigos desportivos e recargas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

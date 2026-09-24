@@ -29,9 +29,45 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#063B7A] text-white pt-16 pb-8 border-t border-blue-900/60 relative overflow-hidden">
-      {/* Decorative top ambient bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#063B7A] text-white pt-0 pb-8 border-t border-blue-900/60 relative overflow-hidden">
+      {/* Contact Bar moved from Header to Footer */}
+      <div className="bg-[#042852] border-b border-white/10 text-xs py-3.5 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-blue-100">
+          <div className="flex items-center gap-4 flex-wrap">
+            <span className="flex items-center gap-1.5 font-medium text-white">
+              <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
+              <span>Lubango, Huíla – Bairro Comandante Cow Boy</span>
+            </span>
+            <span className="hidden md:inline text-white/20">|</span>
+            <a
+              href={`tel:${companySettings.phone.replace(/\s+/g, '')}`}
+              className="flex items-center gap-1.5 hover:text-white transition"
+            >
+              <Phone className="w-3.5 h-3.5 text-blue-300 shrink-0" />
+              <span>{companySettings.phone}</span>
+            </a>
+            <span className="hidden lg:inline text-white/20">|</span>
+            <a
+              href="https://wa.me/244942778643?text=Ol%C3%A1%20JPCT!%20Gostaria%20de%20consultar%20pre%C3%A7os."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-emerald-300 hover:text-emerald-200 transition font-semibold"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+              <span>WhatsApp: +244 942 778 643</span>
+            </a>
+          </div>
+
+          <div className="flex items-center gap-3 text-xs">
+            <div className="flex items-center gap-1.5 text-emerald-300 font-medium">
+              <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span>Comércio Local Confiável & Atendimento no Lubango</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         {/* Main 4 Col Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           {/* Col 1: Brand & Contact brief (2 cols on lg) */}

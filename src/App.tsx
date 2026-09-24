@@ -18,7 +18,6 @@ import { ShopPage } from './components/ShopPage';
 import { AboutPage } from './components/AboutPage';
 import { ContactPage } from './components/ContactPage';
 import { AccountPage } from './components/AccountPage';
-import { AdminPanel } from './components/AdminPanel';
 import { Footer } from './components/Footer';
 import { ProductDetailModal } from './components/ProductDetailModal';
 
@@ -53,7 +52,6 @@ const AppContent: React.FC = () => {
         {currentView === 'about' && <AboutPage />}
         {currentView === 'contact' && <ContactPage />}
         {currentView === 'account' && <AccountPage />}
-        {currentView === 'admin' && <AdminPanel />}
       </main>
 
       {/* Product Detail Modal with Direct WhatsApp Purchase */}

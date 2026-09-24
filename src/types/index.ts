@@ -133,5 +133,4 @@ export type AppView =
   | 'contact'
   | 'account'
   | 'cart'
-  | 'checkout'
-  | 'admin';
+  | 'checkout';

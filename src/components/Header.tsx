@@ -4,10 +4,6 @@ import {
   Search,
   Menu,
   X,
-  Phone,
-  MapPin,
-  ShieldCheck,
-  LayoutDashboard,
   Sparkles,
   MessageCircle,
 } from 'lucide-react';
@@ -18,9 +14,7 @@ export const Header: React.FC = () => {
   const {
     currentView,
     setCurrentView,
-    companySettings,
     setSelectedCategoryFilter,
-    openWhatsApp,
   } = useStore();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -45,44 +39,8 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      {/* Top Announcement Bar */}
-      <div className="bg-[#063B7A] text-white text-xs border-b border-blue-900/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-4 flex-wrap">
-            <span className="flex items-center gap-1.5 text-blue-200">
-              <MapPin className="w-3.5 h-3.5 text-blue-300" />
-              <span>Lubango, Huíla – Bairro Comandante Cow Boy</span>
-            </span>
-            <span className="hidden md:inline-block text-blue-300/40">|</span>
-            <span className="hidden md:flex items-center gap-1.5 text-blue-200">
-              <Phone className="w-3.5 h-3.5 text-blue-300" />
-              <span>{companySettings.phone}</span>
-            </span>
-          </div>
-
-          <div className="flex items-center gap-4 text-xs font-medium ml-auto">
-            <div className="flex items-center gap-1 text-emerald-300">
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Comércio Local Confiável</span>
-            </div>
-            <button
-              onClick={() => navigateTo('admin')}
-              className={`flex items-center gap-1 px-2.5 py-0.5 rounded transition ${
-                currentView === 'admin'
-                  ? 'bg-blue-600 text-white font-semibold'
-                  : 'bg-white/10 hover:bg-white/20 text-blue-100'
-              }`}
-              title="Aceder ao Painel Administrativo da JPCT"
-            >
-              <LayoutDashboard className="w-3 h-3" />
-              <span>Painel Admin</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Main Sticky Header */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80 transition-all duration-300">
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-xs border-b border-slate-200/80 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 gap-4">
             {/* Logo */}
@@ -220,14 +178,6 @@ export const Header: React.FC = () => {
               >
                 <Sparkles className="w-4 h-4" />
                 <span>Explorar Catálogo</span>
-              </button>
-
-              <button
-                onClick={() => navigateTo('admin')}
-                className="w-full flex items-center justify-center gap-2 bg-slate-100 text-slate-700 py-2.5 rounded-xl font-medium text-xs hover:bg-slate-200"
-              >
-                <LayoutDashboard className="w-3.5 h-3.5" />
-                <span>Aceder ao Painel Administrativo</span>
               </button>
             </div>
           </div>

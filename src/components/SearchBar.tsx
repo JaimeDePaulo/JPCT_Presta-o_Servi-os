@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useStore } from '../context/StoreContext';
-import { Search, Tag, X, ArrowRight, CornerDownLeft } from 'lucide-react';
+import { Search, Tag, X, ArrowRight } from 'lucide-react';
 import { Product } from '../types';
 
 export const SearchBar: React.FC = () => {
@@ -106,20 +106,12 @@ export const SearchBar: React.FC = () => {
                   setSearchQuery('');
                   setFilteredResults([]);
                 }}
-                className="p-1.5 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition mr-1"
+                className="p-2 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100 transition mr-2 cursor-pointer"
                 aria-label="Limpar pesquisa"
               >
                 <X className="w-4 h-4" />
               </button>
             )}
-
-            <button
-              type="submit"
-              className="bg-[#0B5ED7] hover:bg-[#063B7A] text-white px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-xl font-bold text-xs sm:text-sm tracking-wide shadow-md hover:shadow-lg transition-all duration-200 shrink-0 flex items-center gap-2 cursor-pointer"
-            >
-              <span>Pesquisar</span>
-              <CornerDownLeft className="w-4 h-4 hidden sm:inline" />
-            </button>
           </form>
 
           {/* Quick search pills */}
